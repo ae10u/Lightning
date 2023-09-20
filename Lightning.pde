@@ -2,7 +2,7 @@ int startX=150;
 int startY=0;
 int endX=150;
 int endY=0;
-float strokeWeight= 4.0;
+float strokeW= 4.0;
 
 void setup()
 {
@@ -20,15 +20,15 @@ void draw()
   fill(53, 57, 53, 10);
   rect(0, 0, 300, 300);
   stroke(255, 230, 0);
-  strokeWeight(strokeWeight);
+  strokeWeight(strokeW);
   endX = startX + (int)(Math.random()*40) - 20;
   endY = startY + (int)(Math.random()*35);
   line(startX, startY, endX, endY);
   startX = endX;
   startY = endY;
-  if (strokeWeight > 1)
+  if (strokeW > 1)
   {
-    strokeWeight = strokeWeight - 0.25;
+    strokeW = strokeW - 0.25;
   }
 }
 void mousePressed()
@@ -43,6 +43,6 @@ void mousePressed()
   endX = startX;
   startY = 0;
   endY = 0;
-  strokeWeight = (int)(Math.random()*5+1);
+  strokeW = (int)(Math.random()*5+1);
   background(220, 220, 200);
 }
